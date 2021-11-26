@@ -1,22 +1,20 @@
-
 from django.shortcuts import render
 from rest_framework import views, generics, authentication, permissions, status
-from rest_framework.serializers import Serializer
-from .models import PQR,PersonaSoporte
-from .serializers import PQRSerializer, PersonaSoporteSerializer
+from .serializers import PersonaSoporteSerializer, PQRSerializer 
+from .models import PersonaSoporte, PQR
 # Create your views here.
 class PersonaSoporteListCreate(generics.ListCreateAPIView):
-    querySet= PersonaSoporte.objects.all()
-    serializer_class= PersonaSoporteSerializer
+    queryset = PersonaSoporte.objects.all()
+    serializer_class = PersonaSoporteSerializer
 
 class PersonaSoporteUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
-    querySet = PersonaSoporte.objects.all()
+    queryset = PersonaSoporte.objects.all()
     serializer_class = PersonaSoporteSerializer
 
 class PQRListCreate(generics.ListCreateAPIView):
-    querySet= PQR.objects.all()
-    serializer_class= PQRSerializer
+    queryset = PQR.objects.all()
+    serializer_class = PQRSerializer
 
 class PQRUpdateDelete(generics.RetrieveUpdateDestroyAPIView):
-    querySet = PQR.objects.all()
+    queryset = PQR.objects.all()
     serializer_class = PQRSerializer
