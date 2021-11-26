@@ -1,6 +1,6 @@
 from django.urls import path
 
-from soporte.views import PQRListCreate, PQRUpdateDelete, PersonaSoporteListCreate, PersonaSoporteUpdateDelete
+from .views import PQRListCreate, PQRUpdateDelete, PersonaSoporteListCreate, PersonaSoporteUpdateDelete
 
 urlpatterns =[
     path('personas-soporte/', PersonaSoporteListCreate.as_view()),
