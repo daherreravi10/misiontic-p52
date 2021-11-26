@@ -5,7 +5,8 @@ from .models import PQR,PersonaSoporte
 class PersonaSoporteSerializer(serializers.ModelSerializer):
     class Meta:
         model= PersonaSoporte
-        fields= ' all '
+        fields= '__all__'
+
 
 class PQRSerializer( serializers.ModelSerializer):
     class Meta:
